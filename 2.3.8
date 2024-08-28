@@ -1,0 +1,58 @@
+----------Execute
+public class WebsiteTester
+{
+    public static void main(String[] args)
+    {
+        // Start here!
+        Website OG = new Website();
+        Website noUser = new Website("harhar", "welp");
+        Website full = new Website("barkbark","gov",1000000);
+        
+        // Print the pinatas
+        System.out.println(OG);
+        System.out.println(noUser);
+        System.out.println(full);
+    }
+}
+-----------class
+public class Website
+{
+    private String domain;
+    private String topLevelDomain;
+    private int numUsers;
+    // Put your code here
+    //Default constructor
+    public Website()
+    {
+        domain = "example";
+        topLevelDomain = "com";
+        numUsers = 0;
+    }
+    // Specify website URL
+    // Register a new website
+    public Website(String domainName, String topDomain)
+    {
+        domain = domainName;
+        topLevelDomain = topDomain;
+        numUsers = 0;
+    }
+    // Specify website URL
+    // Register an old website
+    public Website(String domainNamed, String topDomained, int numPeople)
+    {
+        domain = domainNamed;
+        topLevelDomain = topDomained;
+        numUsers = numPeople;
+    }
+    
+    
+    // String representation for printing
+    // Do not modify this method
+    public String toString()
+    {
+        String res =  "https://www." + domain + "." + topLevelDomain;
+        res += " has " + numUsers + " users";
+        
+        return res;
+    }
+}
